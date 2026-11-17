@@ -12,5 +12,8 @@
     "@playwright/test": "^1.65.1",
     "@types/node": "^26.6.6",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "beacon-reporter": "^0.1.2"
   }
 }
