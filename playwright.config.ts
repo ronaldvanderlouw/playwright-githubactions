@@ -24,9 +24,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   ...(process.env.CI ? { workers: 1 } : {}),
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: process.env.CI
-    ? [['list'], ['html', { open: 'never', outputFolder: 'playwright-report' }]]
-    : [['list'], ['html', { open: 'never' }]],
+  reporter: [['beacon-reporter'], ['list'], ['html', { open: 'never', outputFolder: 'playwright-report' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Run headless in CI and locally. */
